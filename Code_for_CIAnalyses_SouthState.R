@@ -24,7 +24,7 @@ library(FSSgam)
 ##----------------------------------------------
 #Load data-set for analyses of State variables
 ##----------------------------------------------
-CIdata=read.csv("C:/Users/ccastros/OneDrive - Australian Institute of Marine Science/Documents/CIPaper_Draft/forGitHub/CIdata_full.csv")
+CIdata=read.csv("CIdata_full.csv")
 
 
 ##----------------------------------------------
@@ -1066,7 +1066,7 @@ for (i in 1:4){
 }
 pred_dev[5,1]="total"
 pred_dev[5,2]=pred_dev%>%summarize_if(is.numeric, sum, na.rm=TRUE)
-pred_dev[]##MOd explained by Null vars
+pred_dev[]##MOd mostly explained by Null vars
 
 
 
