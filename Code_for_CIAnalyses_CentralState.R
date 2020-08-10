@@ -25,7 +25,7 @@ library(FSSgam)
 ##----------------------------------------------
 #Load data-set for analyses of State variables
 ##----------------------------------------------
-CIdata=read.csv("C:/Users/ccastros/OneDrive - Australian Institute of Marine Science/Documents/CIPaper_Draft/forGitHub/CIdata_full.csv")
+CIdata=read.csv("CIdata_full.csv") 
 
 
 ##----------------------------------------------
@@ -702,7 +702,6 @@ polygon(c(pcots$TCI5_COTS, rev(pcots$TCI5_COTS)),
         c(pcots$lower,rev(pcots$upper)), col="magenta",
         border=NA)
 lines(pcots$TCI5_COTS, pcots$response,  lwd=1)
-points(meandat$TCI5_COTS,meandat$ACTO*100, pch=16,col=adjustcolor("grey", alpha=0.2))
 quantile(Centdat$TCI5_COTS,probs=c(0.50,0.95))
 abline(v=0, col="black", lty=2)
 abline(v=2, col="black", lty=2)
@@ -741,7 +740,6 @@ polygon(c(pdhw$sqrt.DHW^2, rev(pdhw$sqrt.DHW^2)),
         c(pdhw$lower,rev(pdhw$upper)), col="red",
         border=NA)
 lines(pdhw$sqrt.DHW^2, pdhw$response,  lwd=1)
-points(Centdat$sqrt.DHW^2,Centdat$ACTO*100, pch=16,col=adjustcolor("grey", alpha=0.2))
 quantile(Centdat$sqrt.DHW^2,probs=c(0.50,0.95))
 abline(v=0.94, col="black", lty=2)
 abline(v=5.29, col="black", lty=2)
